@@ -13,5 +13,10 @@ export default {
 </script>
 
 <style lang="sass">
-
+#app
+  padding-left: 0
+  padding-right: 0
+  display: flex
+  flex-wrap: wrap
+  justify-content: center
 </style>
