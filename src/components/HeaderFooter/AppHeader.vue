@@ -16,23 +16,34 @@
         video(loop muted autoplay)
           source(src="./../../assets/yugu.mp4" type="video/mp4")
 
-    nav#nav(class="navbar sticky-top navbar-expand-lg navbar-light" style="background-color: #008D49;")
-      button(class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation")
-        span.navbar-toggler-icon
-      div(class="collapse navbar-collapse " id="navbarNav")
-        ul(class="navbar-nav mx-auto")
-          li(class="nav-item active")
-            router-link(to = "/main" class="nav-link text-white")|Главная
-          li(class="nav-item active")
-            router-link(to = "/main" class="nav-link text-white")|Приемная 2021
-          li(class="nav-item active")
-            router-link(to = "/main" class="nav-link text-white")|Условия обучения
-          li(class="nav-item active")
-            router-link(to = "/main" class="nav-link text-white")|Контакты
-          li(class="nav-item active")
-            router-link(to = "/main" class="nav-link text-white")|Архив
-        ul(class="navbar-nav mr-1")
-          router-link(to = "/main" class="nav-link text-white")|Войти
+    b-navbar(toggleable="lg" sticky="true" print="false" type="dark" style="background-color: #008D49;")
+      b-navbar-toggle(target="nav-collapse")
+      b-collapse(id="nav-collapse" is-nav)
+        b-navbar-nav
+          b-nav-item.site-link(to="/main")|Главная
+          b-nav-item(to="/main" style="color: #e0ccff")|Главная
+          b-nav-item(to="/main")|Главная
+          b-nav-item(to="/main")|Главная
+          b-nav-item(to="/main")|Главная
+          b-nav-item(to="/main")|Главная
+
+    //- nav#nav(class="navbar sticky-top navbar-expand-lg navbar-light" style="background-color: #008D49;")
+    //-   button(class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation")
+    //-     span(class="navbar-toggler-icon")
+    //-   div(class="collapse navbar-collapse " id="navbarNav")
+    //-     ul(class="navbar-nav mx-auto")
+    //-       li(class="nav-item active")
+    //-         router-link(to = "/main" class="nav-link text-white")|Главная
+    //-       li(class="nav-item active")
+    //-         router-link(to = "/main" class="nav-link text-white")|Приемная 2021
+    //-       li(class="nav-item active")
+    //-         router-link(to = "/main" class="nav-link text-white")|Условия обучения
+    //-       li(class="nav-item active")
+    //-         router-link(to = "/main" class="nav-link text-white")|Контакты
+    //-       li(class="nav-item active")
+    //-         router-link(to = "/main" class="nav-link text-white")|Архив
+    //-     ul(class="navbar-nav mr-1")
+    //-       router-link(to = "/main" class="nav-link text-white")|Войти
 </template>
 
 <style lang="sass" scoped>
@@ -70,4 +81,6 @@
   display: flex
   flex-wrap: wrap
   justify-content: center
+.bd-navbar .navbar-nav .nav-link
+  color: #e0ccff
 </style>
