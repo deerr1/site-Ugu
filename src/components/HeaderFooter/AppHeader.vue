@@ -11,10 +11,10 @@
           br
           |– месторожение знаний
       .video-mask
-        video(loop muted autoplay)
-          source(src="./../../assets/yugu.mp4" type="video/mp4")
-        b-embed(tag="div" type="video" loop muted autoplay)
-          source(src="./../../assets/yugu.mp4" type="video/mp4")
+        //- video(loop muted autoplay)
+        //-   source(src="./../../assets/yugu.mp4" type="video/mp4")
+    b-embed(type="video" ref="video" loop muted autoplay)
+      source(src="./../../assets/yugu.mp4" type="video/mp4")
 
     b-navbar(id="nav" toggleable="lg" sticky=true  type="dark" style="background-color: #008D49;")
       b-navbar-toggle(target="nav-collapse")
@@ -45,6 +45,14 @@
     //-     ul(class="navbar-nav mr-1")
     //-       router-link(to = "/main" class="nav-link text-white")|Войти
 </template>
+
+<script>
+export default {
+  mounted () {
+    this.$refs.video.querySelector('video').play()
+  }
+}
+</script>
 
 <style lang="sass" scoped>
 .video-box
