@@ -1,5 +1,5 @@
 <template lang="pug">
-  div(class="appHeader container")
+  div.appHeader
     .video-box
       .video-content
         .text-video
@@ -10,22 +10,22 @@
           |университет
           br
           |– месторожение знаний
-        .button-video
-          button(type="button" class="btn btn-primary")|Подать заявление
       .video-mask
         video(loop muted autoplay)
           source(src="./../../assets/yugu.mp4" type="video/mp4")
+        b-embed(tag="div" type="video" loop muted autoplay)
+          source(src="./../../assets/yugu.mp4" type="video/mp4")
 
-    b-navbar(toggleable="lg" sticky="true" print="false" type="dark" style="background-color: #008D49;")
+    b-navbar(id="nav" toggleable="lg" sticky=true  type="dark" style="background-color: #008D49;")
       b-navbar-toggle(target="nav-collapse")
       b-collapse(id="nav-collapse" is-nav)
-        b-navbar-nav
-          b-nav-item.site-link(to="/main")|Главная
-          b-nav-item(to="/main" style="color: #e0ccff")|Главная
-          b-nav-item(to="/main")|Главная
-          b-nav-item(to="/main")|Главная
-          b-nav-item(to="/main")|Главная
-          b-nav-item(to="/main")|Главная
+        b-navbar-nav(class="mx-auto")
+          b-nav-item(to="/")|Главная
+          b-nav-item(to="/" )|Главная
+          b-nav-item(to="/")|Главная
+          b-nav-item(to="/")|Главная
+          b-nav-item(to="/")|Главная
+          b-nav-item(to="/")|Главная
 
     //- nav#nav(class="navbar sticky-top navbar-expand-lg navbar-light" style="background-color: #008D49;")
     //-   button(class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation")
@@ -81,6 +81,4 @@
   display: flex
   flex-wrap: wrap
   justify-content: center
-.bd-navbar .navbar-nav .nav-link
-  color: #e0ccff
 </style>

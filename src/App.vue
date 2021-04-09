@@ -1,5 +1,5 @@
 <template lang="pug">
-div#app
+b-container
   appHeader
 </template>
 
